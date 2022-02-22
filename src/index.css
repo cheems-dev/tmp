@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary: linear-gradient(359.88deg, #01003F -10.29%, #010026 9.3%, #040D70 66.59%, #001252 103.58%);
+    --color-second1: linear-gradient(90deg, #005AFF 0%, #0757FF 9.3%, #1950FF 22.53%, #3845FF 38.12%, #6335FF 55.5%, #9A20FF 74.37%, #DB08FF 94.19%, #F000FF 100%);
+    --color-second2: linear-gradient(83.82deg, #001952 3.9%, #0524AD 37.51%, #0F53D0 52.66%, #6036FF 72.52%, #DB08FF 98.66%);
+    --color-custom1: linear-gradient(260.35deg, #7B12F8 -0.32%, #00023A 44.68%, #000138 69.04%, #2854D6 101.33%);
+    --color-second3: linear-gradient(50.2deg, #0A0A4C 12.64%, #3845FF 60.83%, #F000FF 101.71%);
+}
+
+@layer utilities {
+    .color-primary {
+        background: var(--color-primary);
+        background-blend-mode: darken;
+    }
+
+    .color-second1 {
+        background: var(--color-second1)
+    }
+
+    .btn-color-second1 {
+        background: linear-gradient(359.88deg, #01003F -10.29%, #010026 9.3%, #040D70 66.59%, #001252 103.58%),
+        linear-gradient(90deg, #005AFF 0%, #0757FF 9.3%, #1950FF 22.53%, #3845FF 38.12%, #6335FF 55.5%, #9A20FF 74.37%, #DB08FF 94.19%, #F000FF 100%);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+    }
+
+    .color-second2 {
+        background: var(--color-second2)
+    }
+
+    .color-custom1 {
+        background: var(--color-custom1);
+    }
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../src/assets/fonts/ProximaNova-Regular.eot');
+    src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+    url('../src/assets/fonts/ProximaNova-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('../src/assets/fonts/ProximaNova-Light.eot');
+    src: local('Proxima Nova Light'), local('ProximaNova-Light'),
+    url('../src/assets/fonts/ProximaNova-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Sb';
+    src: url('../src/assets/fonts/ProximaNova-Semibold.eot');
+    src: local('Proxima Nova Semibold'), local('ProximaNova-Semibold'),
+    url('../src/assets/fonts/ProximaNova-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Eb';
+    src: url('../src/assets/fonts/ProximaNova-Extrabld.eot');
+    src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
+    url('../src/assets/fonts/ProximaNova-Extrabld.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* React Slick */
+.slick-dots {
+    position: relative !important;
+}
+.slick-slide > div {
+    margin: 0 20px;
+}
+.slick-list {
+    margin: 0 -20px;
+}
+
+.slick-dots li button:before
+{
+    font-size: 12px !important;
+    color: #B0C4D8 !important;
+    opacity: 1 !important;
+}
+.slick-dots li.slick-active button:before
+{
+    color: #8E26FC !important;
+    opacity: 1 !important;
+}
+/* Fin React Slick */
